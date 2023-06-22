@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"); /* Reset SCSS */
+/* Box sizing */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+}
+
+/* Remove list styles */
+ol, ul {
+  list-style: none;
+}
+
+/* Remove default hyperlink styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  position: relative;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding: 4.4375rem 1.5rem;
+  background-color: hsl(210, 46%, 95%);
+}
+
+p {
+  font-size: 0.8125rem;
+}
+
+.child {
+  color: hsl(0, 0%, 100%);
+  padding: 1.5rem 1.875rem;
+  border-radius: 1rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.child:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+.child__profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.child__profile__img {
+  height: 1.75rem;
+  width: 1.75rem;
+  border: 0.125rem solid hsla(263, 55%, 52%, 0.3);
+  border-radius: 50%;
+}
+.child__profile__ID {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.child__profile__ID .graduate {
+  font-size: 0.68rem;
+  opacity: 50%;
+}
+.child__feedback {
+  font-size: 1.275rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.child__detailedfeedback {
+  opacity: 70%;
+  line-height: 1.0825rem;
+  padding-right: 0.375rem;
+}
+
+.parent .child:first-child .child__detailedfeedback {
+  padding-right: 1.0625rem;
+}
+
+.one {
+  background: hsl(263, 55%, 52%) url(images/bg-pattern-quotation.svg) no-repeat 90% 0%;
+}
+
+.two {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.three {
+  color: hsl(217, 19%, 35%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.four {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.five {
+  color: hsl(217, 19%, 35%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 64rem) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .parent {
+    max-width: 69.375rem;
+    display: grid;
+    gap: 1.875rem;
+    grid-template-areas: "one one two five" "three four four five";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .parent .child {
+    margin-bottom: 0rem;
+  }
+  .parent .child .name {
+    margin-bottom: 0.2rem;
+  }
+  .one {
+    grid-area: one;
+    background: hsl(263, 55%, 52%) url(images/bg-pattern-quotation.svg) no-repeat 82% 0%;
+  }
+  .two {
+    grid-area: two;
+  }
+  .three {
+    grid-area: three;
+  }
+  .four {
+    grid-area: four;
+  }
+  .four .child__feedback {
+    margin-bottom: 1.8rem;
+  }
+  .four .child__detailedfeedback {
+    padding-right: 0.5rem;
+  }
+  .five {
+    grid-area: five;
+  }
+  .five .child__feedback {
+    margin-bottom: 1.8rem;
+  }
+}/*# sourceMappingURL=Style.css.map */
